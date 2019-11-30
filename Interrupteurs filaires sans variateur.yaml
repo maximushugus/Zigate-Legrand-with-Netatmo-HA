@@ -1,0 +1,19 @@
+light:
+  - platform: template
+    lights:
+      nom_de_la_lumière: # Nom de l'entité de cette lumière sur Home Assistant
+        friendly_name: # Nom de la lumière" #Nom qui s'affichera pour cette lumière sur l'interface de Home Assistant
+        turn_on: # Configuration de l'allumage simple de la lumière
+          - service: light.turn_on
+            data:
+              entity_id: light.zigate_xxxxxxxxxxxxxx # Remplir avec le nom de l'entité de la lumière créé automatiquerment par le plugin de Doudz pour la Zigate sur Home Assistant
+          - service: zigate.refresh_device # Appel du service pour actualiser les attributs l'interrupteur, afin de bien synchroniser ces attriuts entre ceux de Home Assistant et ceux réellement dans l'interrupteur
+            data:
+              entity_id: zigate.xxxxxxxxxxxxxx # Remplir avec le nom de l'entité de l'interrupteur (attention PAS celuis de la lumière) créé automatiquement par le plugin de Doudz pour la Zigate sur Home Assistant
+        turn_off: 
+          - service: light.turn_off # Configuration de l'extinction de la lumière
+            data:
+              entity_id: light.zigate_xxxxxxxxxxxxxx # Remplir avec le nom de l'entité de la lumière créé automatiquerment par le plugin de Doudz pour la Zigate sur Home Assistant
+          - service: zigate.refresh_device # Appel du service pour actualiser les attributs l'interrupteur, afin de bien synchroniser ces attriuts entre ceux de Home Assistant et ceux réellement dans l'interrupteur
+            data:
+              entity_id: zigate.xxxxxxxxxxxxxx # Remplir avec le nom de l'entité de l'interrupteur (attention PAS celuis de la lumière) créé automatiquement par le plugin de Doudz pour la Zigate sur Home Assistant
