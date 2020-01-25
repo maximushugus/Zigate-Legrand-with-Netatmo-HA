@@ -13,7 +13,6 @@ Pré-requis :
 _____________________________________________________________________________
 Configuration avec variateur d'intensité :
 
-Le fichier "Interrupteurs filaires avec variateur.yaml" correspond la la configuration type d'une lumière contrôlant un interrupteur filaire avec l'option variateur activée. Cette configuration est à ajouter aux entités des lumières dans le fichier "customize.yaml" du serveur Home Assistant.
 Pour activer l'option variateur sur un interrupteur Legrand with Netatmo filaire, il faut : appeller le service "zigate.raw_command" avec les données suivantes :
 
 cmd: 0x0530
@@ -22,6 +21,7 @@ data: '02 abcd 01 01 fc01 0104 00 00 08 00 01 02 0000 09 0101 f1'
 
 en changeant "abcd" par l'attribut "addr" de l'entité de l'interrutpeur dans Home Assistant (à trouver dans l'onglet "Outils de développement" > "état"
 
+Depuis une MAJ du plugin de doudz, il n'y a plus besoin de modifier le fichier "customize.yaml" pour gérer correctement les interrupteurs Legrand with Netatmo
 ________________________________________________________________________________
 Configuration sans variateur d'intensité :
 
