@@ -25,7 +25,7 @@ en changeant "abcd" par l'attribut "addr" de l'entité de l'interrutpeur dans Ho
 ________________________________________________________________________________
 Configuration sans variateur d'intensité :
 
-Le fichier "Interrupteurs filaires sans variateur.yaml" correspond la la configuration type d'une lumière contrôlant un interrupteur filaire avec l'option variateur désactivée. Cette configuration est à ajouter aux entités des lumières dans le fichier "customize.yaml" du serveur Home Assistant.
+Il n'y a pas besoin de modifier le fichier "customize.yaml"
 Pour désactiver l'option variateur sur un interrupteur Legrand with Netatmo filaire, il faut : appeller le service "zigate.raw_command" avec les données suivantes :
 
 cmd: 0x0530
