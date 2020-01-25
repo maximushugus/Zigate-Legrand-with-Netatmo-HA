@@ -1,8 +1,0 @@
-light.zigate_zigate_xxxxxxxxxxxxxx:
- friendly_name: # Nom de la lumière" #Nom qui s'affichera pour cette lumière sur l'interface de Home Assistant
- set_level: # Configuration du changement d'intensité de la lumière
-  - service: light.turn_on
-    data_template:
-      entity_id: light.zigate_xxxxxxxxxxxxxx # Remplir avec le nom de l'entité de la lumière créé automatiquerment par le plugin de Doudz pour la Zigate sur Home Assistant
-      transition: 1 # Les interrupteurs Legrand with Netatmo nécessitent ce paramètre pour contrôler correctement l'intensité de la lumière (sans ce paramètre, les changements d'intensité demandés ne se font que d'un pourcent à chaque changement d'intensité)
-      brightness: "{{ brightness }}"
